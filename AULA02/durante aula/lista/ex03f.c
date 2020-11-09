@@ -1,30 +1,50 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#define LIM 80
-#define FALSE 0
-#define TRUE 1
 
-int palindromo(char verso[]){
-  int i =  0, n = strlen(verso), k = n / 2, cond = TRUE;
 
-  while (cond && i < k){
-    cond = verso[i] == verso[n - i - 1];
-    i = i + 1;
+
+int palindromo(char palavra[], int i, int j,int retorno){
+  i--;
+  if(i >= 0){
+    if(palavra[i] == palavra[j]){
+      retorno = 1 * palindromo(palavra, i, j+1, retorno);
+    }else{
+      return 0;
+    }
+  }
+  return retorno;
+}
+
+int minuscula(char palavra[], int i){
+  i--;
+
+  int j = (int)palavra[i];      
+
+  if(j >= 65 && j <= 90){
+    j += 32;
+    palavra[i] = j;
+  }
+  if(i > 0){
+    minuscula(palavra, i);
   }
 
-  return cond;
+  return palavra;
 }
 
 int main(){
-    char verso[80];
-
-    scanf("%s",&verso);
-    
-    if (palindromo(verso)) printf("Eh palindromo\n");
-
-    else printf("Nao eh palindromo\n");
-    
-    return 0;
   
+  char palavra[80];
+  int i;
+  
+  scanf("%s",&palavra);
+
+  i = strlen(palavra);
+  
+  minuscula(palavra, i);
+
+  if(palindromo(palavra, i, 0, 1)) printf("\n%s eh palindromo\n", palavra);  
+  else printf("\nNao palindromo\n");  
+    
   return 0; 
 }
