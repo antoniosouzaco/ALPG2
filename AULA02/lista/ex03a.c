@@ -18,7 +18,7 @@ int main(){
     int n;
 
     srand((unsigned)time(NULL));
-    n = 1 + (rand() % 9);
+    n = 4;//1 + (rand() % 9);
     printf("\n\nO número n = %i, o calculo fica assim:\n",n);
     
     printf(" = %.3f  \n\n", divisao((float)n));

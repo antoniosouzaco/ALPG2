@@ -22,7 +22,7 @@ int main(){
   printf("Numero: ");
   scanf("%i",&numero);
 
-  binario(numero);  
+  binario(numero);
 
   return 0;
 }
