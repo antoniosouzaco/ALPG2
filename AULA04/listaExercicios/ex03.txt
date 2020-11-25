@@ -1,0 +1,13 @@
+3) Considere a seguinte sequência de instruções:
+
+int x=10;
+int *pt = &x;
+
+Assinale cada uma das afirmações abaixo como verdadeiras (V) ou falsas (F), considerando que as mesmas são feitas após a execução das instruções acima.
+( F ) O valor de pt é 10
+( V ) o valor de *pt é igual ao valor de x
+( V ) pt armazena o endereço de x
+( F ) o * na segunda instrução diz respeito ao operador de ponteiro utilizado para acessar o que está no endereço armazenado em pt.
+( V ) o * na segunda instrução não é o operador de ponteiro utilizado para acessar o que está no endereço armazenado em pt, mas apenas o tipo utilizado na declaração da variável pt, indicando que a mesma é um ponteiro para inteiro, que em seguida é corretamente inicializada com um endereço de memória.
+( V ) a atribuição realizada na segunda instrução é válida, pois o * é utilizado na declaração de
+uma variável ponteiro, que é inicializada com um endereço de memória. O * nesta linha não diz respeito ao operador * para ponteiro.

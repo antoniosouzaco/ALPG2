@@ -11,9 +11,9 @@ void inverte(char palavraFunc[], int i, int x) {
         aux2 = palavraFunc[x];
         palavraFunc[i] = aux2;
         palavraFunc[x] = aux1;
-        if(i >= x-1) return palavraFunc;
+        if(i >= x-1) return ;
     }
-    return inverte(palavraFunc, i+1, x-1);
+    inverte(palavraFunc, i+1, x-1);
 }
 
 int main(void) {
